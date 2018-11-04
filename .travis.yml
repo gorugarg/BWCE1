@@ -12,7 +12,7 @@ deploy:
     app: "BWCE-FirstProject"
     env: "BwceFirstproject-env"
     bucket_name: "elasticbeanstalk-us-east-2-298552160667"
-    buckat_path: "BWCE-FirstProject"
+    bucket_path: "BWCE-FirstProject"
     on:
         branch: master
         access_key_id: "$AWS_AccessKey"
