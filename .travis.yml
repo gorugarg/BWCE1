@@ -5,7 +5,7 @@ before_install:
     - docker pull gauravgarg9191/bwce:bwce
     - docker build -f GetSample_Dockerfile -t getsample .
 script:
-    - docker run -ti --name=getsample -p 12001:12001 -e="BW_PROFILE=Docker" -e="port=12001" getsample:latest
+    - docker run -ti --name=getsample -p 80:80 -e="BW_PROFILE=Docker" -e="port=80" getsample:latest
 deploy:
     provider: elasticbeanstalk
     region: "us-east-2"

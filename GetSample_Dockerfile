@@ -2,4 +2,4 @@ FROM gauravgarg9191/bwce:bwce
 
 ADD Docker_GetSample_1.0.0.ear .
 
-EXPOSE 12001
+EXPOSE 80
