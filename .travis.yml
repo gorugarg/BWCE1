@@ -2,7 +2,7 @@ sudo: required
 services:
     - docker
 before_install:
-    -docker build -f BWCE_Dockerfile -t bwce .
+    - docker build -f BWCE_Dockerfile -t bwce .
     - docker build -f GetSample_Dockerfile -t getsample .
 script:
     - docker run -ti --name=getsample -p 12001:12001 -e="BW_PROFILE=Docker" -e="port=12001" getsample:latest
