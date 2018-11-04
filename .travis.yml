@@ -6,3 +6,14 @@ before_install:
     - docker build -f GetSample_Dockerfile -t getsample .
 script:
     - docker run -ti --name=getsample -p 12001:12001 -e="BW_PROFILE=Docker" -e="port=12001" getsample:latest
+deploy:
+    provider: elasticbeanstalk
+    region: "us-east-2"
+    app: "BWCE-FirstProject"
+    env: "BwceFirstproject-env"
+    bucket_name: "elasticbeanstalk-us-east-2-298552160667"
+    buckat_path: "BWCE-FirstProject"
+    on:
+        branch: master
+        access_key_id: "$AWS_AccessKey"
+        secret_access_key: "$AWS_SecureKey"
