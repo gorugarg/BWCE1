@@ -16,7 +16,7 @@ deploy:
     bucket_path: "BWCE-FirstProject"
     on:
         branch: master
-        repo: gorugarg/BWCE1
+        
         
     access_key_id: $AWS_AccessKey
     secret_access_key:
