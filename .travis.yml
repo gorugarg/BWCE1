@@ -8,7 +8,7 @@ script:
     - docker run -ti --name=getsample -p 80:80 -e="BW_PROFILE=Docker" -e="port=80" getsample:latest    
 deploy:
     skip_cleanup: true
-    provider: elasticbeanstalk
+    - provider: elasticbeanstalk
     region: "us-east-2"
     app: "BWCE-FirstProject"
     env: "BwceFirstproject-env"
@@ -16,6 +16,7 @@ deploy:
     bucket_path: "BWCE-FirstProject"
     on:
         branch: master
+        repo: gorugarg/BWCE1
         
     access_key_id: $AWS_AccessKey
     secret_access_key:
